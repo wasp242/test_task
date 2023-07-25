@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрационная форма</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="registration-form">
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+          <div class="error" id="error-name"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div class="error" id="error-email"></div>
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="6"
+            required
+          />
+          <div class="error" id="error-password"></div>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Подтверждение пароля:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+          <div class="error" id="error-confirm-password"></div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон (начинающийся с +7):</label>
+          <input type="text" id="phone" name="phone" required />
+          <div class="error" id="error-phone"></div>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+        <button type="reset">Сбросить</button>
+      </form>
+      <div class="success" id="success-message"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
